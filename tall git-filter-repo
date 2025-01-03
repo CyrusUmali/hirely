@@ -1,0 +1,15 @@
+[33mcommit af3d2f98189527851b605d7fc7ed3cf61fff6f74[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Cyrus U. Carbungco <umalic65@gmail.com>
+Date:   Fri Jan 3 20:04:27 2025 +0800
+
+    Remove .env file from tracking
+
+.env
+
+[33mcommit c8855e97f304c7796a5e6811f47a7f6cd48bded1[m
+Author: Cyrus U. Carbungco <umalic65@gmail.com>
+Date:   Fri Jan 3 20:01:29 2025 +0800
+
+    Initial commit
+
+.env
