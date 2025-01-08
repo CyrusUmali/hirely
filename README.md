@@ -1,69 +1,122 @@
-# Laravel Job Searching and Postings Application
-YourJob is a powerful and user-friendly Laravel application for searching for jobs and posting vacancies too. This application is designed to help job seekers find relevant job opportunities quickly and efficiently. With its intuitive interface, responsive/mobile first design, and advanced search capabilities, YourJob makes the job search process a breeze.
+Here’s the updated version with the code snippets included:
 
-Frontend technologies used: Tailwind CSS (Responsive Design) and Alpine.js library.
+---
 
-## Screenshots:
-### Homepage:
-![YourJob-homepage-1](https://github.com/AhmedYahyaE/laravel-job-search-app/assets/118033266/490a6643-c017-487d-8e04-dbedef494339)
+# Project Name  
 
-![YourJob-homepage-2](https://github.com/AhmedYahyaE/laravel-job-search-app/assets/118033266/2c2cbf4e-95cf-4697-b185-7feacdfd2256)
+This is a guide to set up and run the project locally.  
 
-### Login Page:
-![YourJob-login](https://github.com/AhmedYahyaE/laravel-job-search-app/assets/118033266/9e1d40ba-bd64-43a4-b228-3ed137fa5ddd)
+## Prerequisites  
 
-### Create a Job Listing Page:
-![YourJob-create-listing](https://github.com/AhmedYahyaE/laravel-job-search-app/assets/118033266/3a908b85-5e20-4c6f-9d99-2f5c5e32eefd)
+Ensure the following software is installed on your system:  
 
-### User Job Listings Management:
-![YourJob-manage-listings-page](https://github.com/AhmedYahyaE/laravel-job-search-app/assets/118033266/9268b566-8286-4401-8d56-204c0b80f98f)
+1. **Node.js** (latest stable version)  
+2. **Composer**  
+3. **PHP** (compatible with the project)  
+4. A web server, such as **XAMPP**  
+5. A database management tool, such as **phpMyAdmin**  
 
-## Features:
-1- Implemented Social Login (Google OAuth provider) using Laravel Socialite package.
+## Steps to Set Up the Project  
 
-2- Using a Scope Filter (Query Scopes) for both the Search Bar Form and Website Tags implementation.
+### Step 1: Clone the Repository  
 
-3- Using Blade Components and Component Slots.
+Download or clone the project repository from its source. Navigate to the project directory after cloning:  
 
-4- Using Database Seeders and Model Factories.
+```bash
+git clone https://github.com/yourusername/yourproject.git
+cd yourproject
+```
 
-5 - Using Laravel's '[storage](storage)' directory (public disk and local driver) for storing user-uploaded images (instead of the regular '[public](public)' directory). Then, using a Symbolic Link between the '[storage/app/public](storage/app/public)' directory and '[public/storage](public/storage)' directory to display images throughout the application.
+### Step 2: Install Dependencies  
 
-6- Using Route Model Binding.
+#### Node.js Dependencies  
+Install Node.js dependencies using the following command:  
 
-7- Using Alpine.js library for creating Session Flash Messages that disappears after a specified duration.
+```bash
+npm install
+```
 
-8- Using Tailwind CSS for creating a completely responsive/mobile first design.
+#### PHP Dependencies  
+Install PHP dependencies using Composer:  
 
-9- Eloquent Pagination.
+```bash
+composer install
+```
 
-10-  User Registration, Authentication and Authorization.
+### Step 3: Set Up Storage  
 
-## Application Routes:
-All the application routes are defined in the [web.php](/routes/web.php) file.
+Create a symbolic link for the storage directory as required by the project:  
 
-## Installation & Configuration:
+```bash
+php artisan storage:link
+```
 
-1- Open your terminal, and use the '***git clone https://github.com/AhmedYahyaE/laravel-job-search-app.git***' command, or just download the ZIP project.
+### Step 4: Configure the Environment  
 
-2- Navigate/Change into (using the **cd** command) to the project root directory, then run the '***composer install***' command.
+1. Duplicate the example environment file provided in the project and rename it to `.env`:  
 
-3- Run the '***npm install***' command (and only in case you face any issues/errors, run the 'npm audit fix' command), and then run the '***npm run build***' command.
+```bash
+cp .env.example .env
+```
 
-4- Create a MySQL database named **\`yourjob\`**, then import the **[yourjob database SQL Dump File](<Database - yourjob/yourjob database - SQL Dump File - phpMyAdmin Export.sql>)** into your \`yourjob\` database.
+2. Open the `.env` file and make the following changes:  
+   - Set the database name to `yourjob`:  
+     ```plaintext
+     DB_DATABASE=yourjob
+     ```  
+   - Update the database username and password as needed:  
+     ```plaintext
+     DB_USERNAME=yourusername
+     DB_PASSWORD=yourpassword
+     ```  
 
-5- Navigate to the **[.env](.env)** file and configure/update it with your MySQL database credentials and other configuration settings.
+### Step 5: Import the Database  
 
-6- In case the application images are broken (are not loaded), recreate the Symbolic Link between the '[storage/app/public](storage/app/public)' directory and '[public/storage](public/storage)' directory by removing/deleting the [public/storage](public/storage) directory first, then run the '***php artisan storage:link***' command.
+1. Open phpMyAdmin or your preferred database tool.  
+2. Create a new database named `yourjob`.  
+3. Import the database file located in the `database` folder of the project into the newly created database.  
+   - File path: `database/yourjob.sql`  
 
-7- Run the '***php artisan serve***' command, and then open your browser and visit **http://127.0.0.1:8000** to access YourJob application.
+### Step 6: Run the Application  
 
-\*\* Ready-to-use registered accounts credentials you can use to log in:
-> Email: **test@test.com**, Password: **123456**
+#### Start the Development Server  
 
-> Email: **yasser@gmail.com**, Password: **123456**
-    
-> Email: **test2@test.com**, Password: **123456**
+Run the following command to start the PHP development server:  
 
-## Contribution:
-Contributions to my YourJob Laravel application are most welcome! If you find any issues or have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
+```bash
+php artisan serve
+```
+
+#### Compile Assets for Development  
+
+Run the following command to compile assets (e.g., CSS/JS):  
+
+```bash
+npm run dev
+```
+
+### Step 7: Access the Application  
+
+Open your web browser and navigate to:  
+
+```plaintext
+http://localhost:8000
+```
+
+## Additional Notes  
+
+- To compile assets for production use, run:  
+
+```bash
+npm run build
+```
+
+- To clear the application cache, run:  
+
+```bash
+php artisan cache:clear
+```
+
+---  
+
+This guide provides a step-by-step overview of setting up and running the project on your local machine.
