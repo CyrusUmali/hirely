@@ -26,13 +26,13 @@
                     <li class="nav-header">
                         <div class="dropdown profile-element">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="block m-t-xs font-bold">Admin</span>
+                                <span class="block m-t-xs font-bold">Hirely</span>
                             </a>
 
                         </div>
-                        <div class="logo-element">
+                        <!-- <div class="logo-element">
                             IN+
-                        </div>
+                        </div> -->
                     </li>
                     <li>
                     <li>
@@ -40,11 +40,11 @@
                     </li>
 
                     <li>
-                        <a href="{{ url('/admin/listings') }}"><i class="fa fa-users"></i> <span class="nav-label">Listings</span> <span class="fa arrow"></span></a>
+                        <a href="{{ url('/admin/listings') }}"><i class="fa fa-list"></i> <span class="nav-label">Listings</span> <span class="fa arrow"></span></a>
                     </li>
 
                     <li>
-                        <a href="{{ url('/admin/comments') }}"><i class="fa fa-users"></i> <span class="nav-label">Comments</span> <span class="fa arrow"></span></a>
+                        <a href="{{ url('/admin/comments') }}"><i class="fa fa-comment"></i> <span class="nav-label">Comments</span> <span class="fa arrow"></span></a>
                     </li>
 
                     </li>

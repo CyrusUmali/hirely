@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 03, 2025 at 12:59 PM
+-- Generation Time: Jan 08, 2025 at 02:12 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -60,7 +60,8 @@ CREATE TABLE `applications` (
 --
 
 INSERT INTO `applications` (`id`, `user_id`, `listing_id`, `created_at`, `updated_at`, `status`) VALUES
-(12, 6, 11, '2024-12-31 01:16:52', '2024-12-31 01:17:00', 'accepted');
+(13, 6, 14, '2025-01-08 04:37:00', '2025-01-08 04:37:15', 'accepted'),
+(14, 5, 14, '2025-01-08 04:43:43', '2025-01-08 04:43:43', 'pending');
 
 -- --------------------------------------------------------
 
@@ -83,8 +84,8 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `application_id`, `content`, `created_at`, `updated_at`, `user_id`, `target_user_id`) VALUES
-(19, 12, 'vERY GOOD AT HIS JOB', '2024-12-31 01:17:10', '2024-12-31 01:17:10', 5, 6),
-(20, 12, 'I had a very nice expericnce wokring here :>', '2025-01-02 05:49:44', '2025-01-02 05:49:44', 6, 5);
+(21, 13, 'Mike demonstrated a solid understanding of core front-end technologies, including HTML, CSS, and JavaScript. His knowledge of modern frameworks like React is evident, and he effectively utilized reusable components and state management techniques in his projects. Additionally, he showcased a good grasp of responsive design principles and accessibility best practices, which are critical for building user-friendly interfaces.', '2025-01-08 04:38:17', '2025-01-08 04:38:17', 7, 6),
+(22, 13, 'My Experience as a Frontend Developer at TechSphere Solutions\r\n\r\nWorking at TechSphere Solutions has been an incredibly rewarding experience, both professionally and personally. The dynamic and innovative environment here has allowed me to grow as a Frontend Developer while contributing meaningfully to impactful projects.', '2025-01-08 04:40:27', '2025-01-08 04:40:27', 6, 7);
 
 -- --------------------------------------------------------
 
@@ -128,8 +129,8 @@ CREATE TABLE `listings` (
 --
 
 INSERT INTO `listings` (`id`, `user_id`, `title`, `logo`, `tags`, `company`, `location`, `email`, `website`, `description`, `created_at`, `updated_at`) VALUES
-(11, 5, 'Airplane Pilot', 'logos/6zye3nZcbx9OXKG9YbdEkHbuFmbxRARlmGLMIz5e.png', 'Driving', 'AirCorp', 'San Andreas', 'phisora@gmail.com', 'AirCorps.com', 'You will be responsible for driving the president of Mars', '2024-12-31 00:56:57', '2024-12-31 00:56:57'),
-(12, 5, 'qweq', NULL, 'wqe', 'qweq', 'qwe', 'qwe@hmaw', 'qwe', 'qwe', '2025-01-02 05:23:01', '2025-01-02 05:23:01');
+(13, 7, 'Senior Laravel Developer', 'logos/nU3zRmw0SdiUwbGNVwX8fr3mDNUx131eGQrbyd7R.png', 'Laravel, Backend, PHP, MySQL, AWS', 'CodeCrafters Inc.', 'Remote', 'careers@codecrafters.com', 'www.codecrafters.com/careers', 'We are looking for a Senior Laravel Developer with 5+ years of experience. Responsibilities include building scalable web applications, collaborating with a dynamic team, and ensuring robust backend systems.', '2025-01-08 04:31:19', '2025-01-08 04:31:19'),
+(14, 7, 'Frontend Developer', 'logos/k1KYfGk2mAfWQAZkmOPWflfhXTx5sYCvyTUXvOBr.png', 'JavaScript, React, CSS, HTML, Figma', 'TechSphere Solutions', 'Boston, MA', 'jobs@techsphere.com', 'www.techsphere.com/jobs/frontend', 'Join our team as a Frontend Developer to create user-friendly interfaces and enhance our client-facing applications. 2+ years of experience required.', '2025-01-08 04:35:10', '2025-01-08 04:35:10');
 
 -- --------------------------------------------------------
 
@@ -212,7 +213,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `cv_path`) VALUES
 (5, 'sora', 'phisora@gmail.com', NULL, '$2y$10$.Geo9l/8fWEnpUET/q1D2Oslnt.q7H1XCVIDUdJG7aTuLecE.ZpBS', NULL, '2024-12-31 00:54:20', '2024-12-31 21:31:53', 'cvs/O4epHmxjb0uEQMPzYimSamOjLJkA0n7oyFaE3tSL.pdf'),
-(6, 'mike Reyes', 'mike@gmail.com', NULL, '$2y$10$SsEGrPkx..steAmkf/CyQusrEcwmOCL6lo1XIB7/y0Jr2ZhsxckKS', NULL, '2024-12-31 00:59:51', '2024-12-31 00:59:51', NULL);
+(6, 'mike Reyes', 'mike@gmail.com', NULL, '$2y$10$SsEGrPkx..steAmkf/CyQusrEcwmOCL6lo1XIB7/y0Jr2ZhsxckKS', NULL, '2024-12-31 00:59:51', '2024-12-31 00:59:51', NULL),
+(7, 'Claire Agnes', 'claire@gmail.com', NULL, '$2y$10$IVuAUJkhPbPYz.dcRtTy/OktVkLR0Ho6h5I/mp2P1mYJ/PEP19diS', NULL, '2025-01-08 04:25:27', '2025-01-08 04:25:27', NULL);
 
 --
 -- Indexes for dumped tables
@@ -294,13 +296,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `applications`
 --
 ALTER TABLE `applications`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -312,7 +314,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `listings`
 --
 ALTER TABLE `listings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -330,7 +332,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
