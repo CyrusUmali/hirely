@@ -1,8 +1,5 @@
-Here’s the updated version with the code snippets included:
-
----
-
-# Project Name  
+ 
+# Hirely
 
 This is a guide to set up and run the project locally.  
 
